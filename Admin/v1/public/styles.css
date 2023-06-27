@@ -1,0 +1,237 @@
+/*General CSS*/
+body{
+    font-family: 'Montserrat', sans-serif !important;
+}
+.b3{font-weight: 300;}
+.b4{font-weight: 400;}
+.b5{font-weight: 500;}
+.b6{font-weight: 600;}
+.b7{font-weight: 700;}
+h1{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    color: #344054;
+}
+
+/*Login Page CSS*/
+.loginBG{
+    width: '100vw';
+    height: '100vh';
+    /* background-image: `url(${backgroundImage})`; */
+    background-position: 'center';
+    background-size: 'cover';
+    background-repeat: 'no-repeat';
+    background: url('./images/bgLogin.jpg') no-repeat center center;    background-size: cover;
+}
+.loginCenter{
+    flex-direction: column;justify-content: center;height: 100%;
+}
+.logoBorder{
+    border: 5px solid #fff;    border-radius: 10px;margin: 0 auto;    display: block;
+}
+.loginDialogue{
+    background: #fff;
+    border-radius: 16px;
+    width: 500px;
+    margin: 48px auto 0;
+    padding: 21px 25px;
+}
+.forgotPassword{
+    display: inline-block;
+    float: right;
+}
+a{
+    color: #5C2684; text-decoration: none !important;
+}
+a:visited{
+    color: #5C2684; text-decoration: none;
+}
+h1.signIn{
+    color: #000;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+.btn-primary{
+    background: #5C2684 !important;
+}
+.dash-BG{
+    height: 100%; 
+    background: #F9FAFB;
+}
+/*Left Panel CSS*/
+.left-nav-panel{
+    background: #1D002E;
+    height: 100%;
+    width: 20%;
+}
+.logo-bar{
+    padding:32px 24px;
+}
+.navigation{
+    padding: 0 24px;
+}
+.nav-item{
+    margin-bottom: 12px;
+}
+a.nav-link{
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+a.nav-link:hover{
+    color: #E3B1FF;
+}
+a.nav-link:hover svg path{
+    stroke: #E3B1FF;
+}
+a.nav-link svg{
+    margin-right: 12px;
+}
+a.nav-link.active{
+    background: #400063;
+    color: #E3B1FF;
+    border-radius: 6px
+}
+a.nav-link.active svg path{
+    stroke: #E3B1FF;
+}
+.navigation-bottom{
+    padding: 0 24px;
+    position: fixed;
+    bottom: 0;
+    width: 18%;
+}
+.avatar-bar{
+    margin: 0 18px;
+    border-top: 1px solid #400063;
+    padding: 20px 0 10px;
+    color: #fff;
+    align-items: center;
+    font-size: 14px;
+}
+.avatar-bar img{
+    margin-right: 12px;
+}
+.last-login {
+    color: #fff;
+    font-size: 14px;
+    margin: 10px 18px 30px;
+}
+
+/*Right Panel CSS*/
+.right-panel{
+    width: 80%;
+}
+.page-content{
+    padding: 32px 24px;
+}
+.trans-cards {
+    margin: 16px 0 21px;
+}
+.trans-cards .cards{
+    margin: 24px 0;
+}
+a.btn {
+    border-color: #D0D5DD;
+    font-size: 14px;
+    color: #344054;
+    padding: 9px 16px;
+    font-weight: 500;
+}
+a.btn.active{
+    background: #F9EEFF;
+    border-color: #EED0FF;
+}
+button.btn.btn-light {
+    border: 1px solid #D0D5DD;
+    min-width: 170px;
+    display: flex;
+    align-items: center;
+    color: #667085;
+    font-weight: 500;
+    margin-right: 16px;
+    justify-content: center;
+}
+button.btn.btn-light svg{
+    margin-right: 12px;
+}
+.single-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 17px 8px;
+}
+.card-gray-slot {
+    background: #F9FAFB;
+    padding: 24px;
+    border-radius: 12px;
+}
+.card-slot-col-1 {
+    font-size: 12px;
+    color: #344054;
+    font-weight: 500;
+    border-bottom: 1px dashed #98A2B3;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+.card-numbers {
+    font-size: 24px;
+    font-weight: 600;
+    color: #344054;
+}
+a.view-request-1 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #344054;
+    margin: 15px 13px;
+    display: inline-block;
+}
+
+.card-slot-col-2 {
+    font-size: 12px;
+    color: #5C068C;
+    font-weight: 500;
+    border-bottom: 1px dashed #98A2B3;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+a.view-request-2 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #5C068C;
+    margin: 15px 13px;
+    display: inline-block;
+}
+.card-slot-col-3 {
+    font-size: 12px;
+    color: #B54708;
+    font-weight: 500;
+    border-bottom: 1px dashed #98A2B3;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+a.view-request-3 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #B54708;
+    margin: 15px 13px;
+    display: inline-block;
+}
+.card-slot-col-4 {
+    font-size: 12px;
+    color: #B42318;
+    font-weight: 500;
+    border-bottom: 1px dashed #98A2B3;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+a.view-request-4 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #B42318;
+    margin: 15px 13px;
+    display: inline-block;
+}
