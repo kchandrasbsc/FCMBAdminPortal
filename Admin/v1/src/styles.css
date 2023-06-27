@@ -1,4 +1,7 @@
 /*General CSS*/
+html, body, #root, .App {
+    height: 100%;
+  }
 body{
     font-family: 'Montserrat', sans-serif !important;
 }
@@ -16,12 +19,12 @@ h1{
 
 /*Login Page CSS*/
 .loginBG{
-    width: '100vw';
-    height: '100vh';
+    width: 100%;
+    height: 100%;
     /* background-image: `url(${backgroundImage})`; */
-    background-position: 'center';
-    background-size: 'cover';
-    background-repeat: 'no-repeat';
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background: url('./images/bgLogin.jpg') no-repeat center center;    background-size: cover;
 }
 .loginCenter{

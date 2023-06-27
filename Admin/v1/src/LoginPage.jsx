@@ -26,8 +26,8 @@ const LoginPage = () => {
         body: JSON.stringify({ username, password }),
       });
 
-      // if (response.ok) {
-        if (true) {
+      if (response.ok) {
+        // if (true) {
         // Login successful, redirect to the dashboard
         window.location.href = '/Dashboard';
       } else {
@@ -45,14 +45,14 @@ const LoginPage = () => {
         <div className="container">
             <img src={require("./images/logo1.png")} alt="FCMB" className="logoBorder"/>
             <div className="loginDialogue">
-                <h1 classNameName="signIn">Sign in</h1>
+                <h1 className="signIn">Sign in</h1>
                 <form className="mb-0" onSubmit={handleSubmit}>
                     <div className="mb-3">
-                      <label for="exampleInputEmail1" className="form-label">Email address</label>
+                      <label htmlFor ="exampleInputEmail1" className="form-label">Email address</label>
                       <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={username} onChange={handleUsernameChange}/>
                     </div>
                     <div className="mb-3">
-                        <label for="exampleInputPassword1" className="form-label">Password</label>
+                        <label htmlFor ="exampleInputPassword1" className="form-label">Password</label>
                         <div className="input-group">
                             <input className="form-control" id="exampleInputPassword1" type="password" value={password} onChange={handlePasswordChange}/>
                             <div className="input-group-text">
@@ -65,7 +65,7 @@ const LoginPage = () => {
                     </div>
                     <div className="form-check mb-3">
                       <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                      <label className="form-check-label" for="exampleCheck1">Remember me</label>
+                      <label className="form-check-label" htmlFor ="exampleCheck1">Remember me</label>
                       <a href="#" className="forgotPassword b5">Forgot password ?</a>
                     </div>
                     <div className="d-grid">
