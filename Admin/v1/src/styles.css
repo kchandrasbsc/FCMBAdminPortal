@@ -16,7 +16,9 @@ h1{
     line-height: 38px;
     color: #344054;
 }
-
+.BG{
+    height: 100%;
+}
 /*Login Page CSS*/
 .loginBG{
     width: 100%;

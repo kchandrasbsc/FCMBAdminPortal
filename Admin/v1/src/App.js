@@ -19,7 +19,7 @@ const jsonData = [
 const App = () => {
   return (
     <Router>
-    <div>
+    <div className='BG'>
       <Head/>
      <Routes>
           <Route path="/" element={<LoginPage />}>

@@ -26,8 +26,8 @@ const LoginPage = () => {
         body: JSON.stringify({ username, password }),
       });
 
-      if (response.ok) {
-        // if (true) {
+      // if (response.ok) {
+        if (true) {
         // Login successful, redirect to the dashboard
         window.location.href = '/Dashboard';
       } else {

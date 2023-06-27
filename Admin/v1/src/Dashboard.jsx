@@ -1,4 +1,5 @@
 import React from 'react';
+import RightPanel from './RightPanel'; 
 const Dashboard = () => {
   return (
     <div className="fluid-container dash-BG d-flex">
@@ -63,7 +64,7 @@ const Dashboard = () => {
                 </div>
             </div>
         </div>
-        <div className="right-panel">
+        {/* <div className="right-panel">
             <div className="page-content">
                 <h1>Welcome, Olivia Rhye</h1>
                 <div className="trans-cards">
@@ -174,7 +175,8 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
+        <RightPanel />
     </div>
   );
 };
