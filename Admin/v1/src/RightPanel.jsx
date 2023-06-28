@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import HeaderBar from './HeaderBar';
+import DashboardCard from './DashboardCard';
 
 class RightPanel extends Component {
      render(){ 
@@ -7,7 +9,7 @@ class RightPanel extends Component {
                 <div className="page-content">
                     <h1>Welcome, Olivia Rhye</h1>
                     <div className="trans-cards">
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-6">
                                 <div className="btn-group">
                                     <a href="#" className="btn active" aria-current="page">24 Hours</a>
@@ -35,28 +37,14 @@ class RightPanel extends Component {
                                 </div>
                                 
                             </div>
-                        </div>
+                        </div> */}
+                        <HeaderBar/>
                         <div className="cards">
                             <div className="row gx-3">
                                 <div className="col-3">
-                                    <div className="single-card">
-                                        <div className="card-gray-slot">
-                                            <div className="card-slot-col-1">
-                                                Pending Transactions
-                                            </div>
-                                            <div className="card-numbers">
-                                                10
-                                            </div>
-                                        </div>
-                                        <a href="" className="view-request-1">
-                                            View Request    
-                                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.11692 0.625L12.8748 5L8.11692 9.375M11.9775 5.01984H0.833221" stroke="#344054" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                                            </svg>
-                                        </a>
-                                    </div>
+                                    <DashboardCard/>
                                 </div>
-                                <div className="col-3">
+                                {/* <div className="col-3">
                                     <div className="single-card">
                                         <div className="card-gray-slot">
                                             <div className="card-slot-col-2">
@@ -73,8 +61,8 @@ class RightPanel extends Component {
                                             </svg>
                                         </a>
                                     </div>
-                                </div>
-                                <div className="col-3">
+                                </div> */}
+                                {/* <div className="col-3">
                                     <div className="single-card">
                                         <div className="card-gray-slot">
                                             <div className="card-slot-col-3">
@@ -91,8 +79,8 @@ class RightPanel extends Component {
                                             </svg>
                                         </a>
                                     </div>
-                                </div>
-                                <div className="col-3">
+                                </div> */}
+                                {/* <div className="col-3">
                                     <div className="single-card">
                                         <div className="card-gray-slot">
                                             <div className="card-slot-col-4">
@@ -109,7 +97,7 @@ class RightPanel extends Component {
                                             </svg>
                                         </a>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
