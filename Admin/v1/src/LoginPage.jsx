@@ -30,7 +30,7 @@ const LoginPage = () => {
       // if (response.ok) {
         if (true) {
         // Login successful, redirect to the dashboard
-        window.location.href = '/Dashboard';
+        window.location.href = '/Dashboard/cards';
       } else {
         // Login failed, display error message
         setError('Invalid username or password');

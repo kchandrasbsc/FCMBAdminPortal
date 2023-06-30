@@ -11,7 +11,7 @@ class LeftPanel extends Component {
     <div className="navigation">
         <ul className="nav flex-column">
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/Dashboard/cards">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 20V10M12 20V4M6 20V14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -19,7 +19,7 @@ class LeftPanel extends Component {
                 </a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <a className="nav-link" aria-current="page" href="/Dashboard/transection">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 6H21M8 12H21M8 18H21M3 6H3.01M3 12H3.01M3 18H3.01" stroke="#FCFCFD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
