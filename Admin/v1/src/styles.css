@@ -18,6 +18,9 @@ h1{
 }
 .BG{
     height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 }
 /*Login Page CSS*/
 .loginBG{
@@ -129,7 +132,7 @@ a.nav-link.active svg path{
 
 /*Right Panel CSS*/
 .right-panel{
-    width: 80%;
+    width: 100%;
 }
 .page-content{
     padding: 32px 24px;
@@ -240,3 +243,14 @@ a.view-request-4 {
     margin: 15px 13px;
     display: inline-block;
 }
+.asc::after {
+    content: '👇';
+    display: inline-block;
+    margin-left: 1em;
+  }
+  
+.desc::after {
+    content: '☝️';
+    display: inline-block;
+    margin-left: 1em;
+  }

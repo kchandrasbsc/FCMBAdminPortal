@@ -1,8 +1,47 @@
-import React, { Component } from "react";
+import React, { Component,  useState  } from "react";
 
-class Transection extends Component{
-    render(){
+// class Transection extends Component{
+//     render(){
+    const Transection = ({ data }) => {
+        const [searchTerm, setSearchTerm] = useState('');
+        const [sortColumn, setSortColumn] = useState(null);
+        const [sortDirection, setSortDirection] = useState('asc');
+      
+        const handleSearch = (e) => {
+          setSearchTerm(e.target.value);
+        };
+      
+        const handleSort = (column) => {
+          if (sortColumn === column) {
+            setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+          } else {
+            setSortColumn(column);
+            setSortDirection('asc');
+          }
+        };
+      
+        const filteredData = data.filter((item) =>
+          Object.values(item).some((value) =>
+            value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+          )
+        );
+      
+        const sortedData = sortColumn
+          ? filteredData.sort((a, b) => {
+              const aValue = a[sortColumn];
+              const bValue = b[sortColumn];
+      
+              if (aValue < bValue) {
+                return sortDirection === 'asc' ? -1 : 1;
+              }
+              if (aValue > bValue) {
+                return sortDirection === 'asc' ? 1 : -1;
+              }
+              return 0;
+            })
+          : filteredData;
         return(
+            <div className="right-panel">
             <div className="page-content">
             <h1>Transactions</h1>
             <div className="table-structure">
@@ -13,8 +52,12 @@ class Transection extends Component{
                     <div className="row">
                         <div className="col">
                             <div className="btn-group">
-                                <a href="#" className="btn active" aria-current="page">All Requests</a>
-                                <a href="#" className="btn">Completed</a>
+                                <button className="btn active" aria-current="page" value={''}
+                                    onClick={handleSearch}>All Requests</button>
+                                <button className="btn active" value={'Active'}
+                                    onClick={handleSearch}>Active</button>
+                                    <button className="btn active" value={'Completed'}
+                                    onClick={handleSearch}>Completed</button>
                                 <a href="#" className="btn">Pending</a>
                                 <a href="#" className="btn">Cancelled</a>
                             </div>
@@ -26,13 +69,14 @@ class Transection extends Component{
                                         <path d="M16.5 16.5L12.875 12.875M14.8333 8.16667C14.8333 11.8486 11.8486 14.8333 8.16667 14.8333C4.48477 14.8333 1.5 11.8486 1.5 8.16667C1.5 4.48477 4.48477 1.5 8.16667 1.5C11.8486 1.5 14.8333 4.48477 14.8333 8.16667Z" stroke="#101828" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>                                        
                                 </span>
-                                <input type="text" className="form-control" placeholder="Account name or number"/>
+                                <input type="text" className="form-control" placeholder="Account name or number" value={searchTerm}
+                                    onChange={handleSearch}/>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="data-table-area">
-                    <table className="table table-hover table-bordered mb-0">
+                    {/* <table className="table table-hover table-bordered mb-0">
                         <thead>
                           <tr>
                             <th>Account</th>
@@ -91,12 +135,34 @@ class Transection extends Component{
                             <td><span className="badge bg-dark">On Hold</span></td>
                           </tr>
                         </tbody>
-                      </table>
+                      </table> */}
+                      <table className="table table-hover table-bordered mb-0">
+                            <thead>
+                            <tr>
+                                {Object.keys(data[0]).map((column) => (
+                                <th 
+                                         className={ sortDirection === 'asc' ? "asc" : "desc" } key={column} onClick={() => handleSort(column)} >
+                                    {column}                    
+                                </th>
+                                ))}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {sortedData.map((item, index) => (
+                                <tr key={index}>
+                                {Object.values(item).map((value, index) => (
+                                    <td key={index}>{value}</td>
+                                ))}
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
                 </div>
             </div>
         </div>
+        </div>
         );
     };
-}
+// }
 
 export default Transection;
