@@ -51,15 +51,12 @@ import React, { Component,  useState  } from "react";
                 <div className="table-filters">
                     <div className="row">
                         <div className="col">
-                            <div className="btn-group">
-                                <button className="btn active" aria-current="page" value={''}
-                                    onClick={handleSearch}>All Requests</button>
-                                <button className="btn active" value={'Active'}
-                                    onClick={handleSearch}>Active</button>
-                                    <button className="btn active" value={'Completed'}
-                                    onClick={handleSearch}>Completed</button>
-                                <a href="#" className="btn">Pending</a>
-                                <a href="#" className="btn">Cancelled</a>
+                            <div className="btn-group" role="group">
+                                <button type="button" className="btn active" aria-current="page" value={''} onClick={handleSearch}>All Requests</button>
+                                <button type="button" className="btn" value={'Active'} onClick={handleSearch}>Active</button>
+                                <button type="button" className="btn" value={'Completed'} onClick={handleSearch}>Completed</button>
+                                <button type="button" className="btn">Pending</button>
+                                <button type="button" className="btn">Cancelled</button>
                             </div>
                         </div>
                         <div className="col-4">
@@ -75,67 +72,7 @@ import React, { Component,  useState  } from "react";
                         </div>
                     </div>
                 </div>
-                <div className="data-table-area">
-                    {/* <table className="table table-hover table-bordered mb-0">
-                        <thead>
-                          <tr>
-                            <th>Account</th>
-                            <th>Type</th>
-                            <th>Location</th>
-                            <th>Date</th>
-                            <th>Initiator</th>
-                            <th>Solicitor</th>
-                            <th>Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                                0324827323
-                                <div className="ac-name">Kappa Corporation</div>
-                            </td>
-                            <td>Corporate</td>
-                            <td>Kano</td>
-                            <td>
-                                24 May, 2023
-                                <div className="ac-name">23:18:00</div>
-                            </td>
-                            <td>Mbah Jacob</td>
-                            <td>Duff Deer</td>
-                            <td><span className="badge bg-warning">Pending</span></td>
-                          </tr>
-                          <tr>
-                            <td>
-                                0324827323
-                                <div className="ac-name">Kappa Corporation</div>
-                            </td>
-                            <td>Corporate</td>
-                            <td>Kano</td>
-                            <td>
-                                24 May, 2023
-                                <div className="ac-name">23:18:00</div>
-                            </td>
-                            <td>Mbah Jacob</td>
-                            <td>Duff Deer</td>
-                            <td><span className="badge bg-success">Completed</span></td>
-                          </tr>
-                          <tr>
-                            <td>
-                                0324827323
-                                <div className="ac-name">Kappa Corporation</div>
-                            </td>
-                            <td>Corporate</td>
-                            <td>Kano</td>
-                            <td>
-                                24 May, 2023
-                                <div className="ac-name">23:18:00</div>
-                            </td>
-                            <td>Mbah Jacob</td>
-                            <td>Duff Deer</td>
-                            <td><span className="badge bg-dark">On Hold</span></td>
-                          </tr>
-                        </tbody>
-                      </table> */}
+                <div className="data-table-area table-responsive">
                       <table className="table table-hover table-bordered mb-0">
                             <thead>
                             <tr>

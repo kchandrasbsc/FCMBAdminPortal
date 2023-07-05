@@ -74,6 +74,7 @@ h1.signIn{
     background: #1D002E;
     height: 100%;
     width: 20%;
+    position: relative;
 }
 .logo-bar{
     padding:32px 24px;
@@ -109,9 +110,9 @@ a.nav-link.active svg path{
 }
 .navigation-bottom{
     padding: 0 24px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    width: 18%;
+    width: 100%;
 }
 .avatar-bar{
     margin: 0 18px;
@@ -132,7 +133,7 @@ a.nav-link.active svg path{
 
 /*Right Panel CSS*/
 .right-panel{
-    width: 100%;
+    width: 80%;
 }
 .page-content{
     padding: 32px 24px;
@@ -143,14 +144,14 @@ a.nav-link.active svg path{
 .trans-cards .cards{
     margin: 24px 0;
 }
-a.btn {
+.btn {
     border-color: #D0D5DD;
     font-size: 14px;
     color: #344054;
     padding: 9px 16px;
     font-weight: 500;
 }
-a.btn.active{
+.btn.active{
     background: #F9EEFF;
     border-color: #EED0FF;
 }
@@ -244,13 +245,60 @@ a.view-request-4 {
     display: inline-block;
 }
 .asc::after {
-    content: '👇';
+    content: ' ' ;
     display: inline-block;
     margin-left: 1em;
-  }
-  
+    background: url('./images/arrow-down-short.svg') no-repeat center center;
+    width: 14px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
 .desc::after {
-    content: '☝️';
+    content: ' ';
     display: inline-block;
     margin-left: 1em;
-  }
+    background: url('./images/arrow-up-short.svg') no-repeat center center;
+    width: 14px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+/* Data Table Structure */
+.table-structure{
+    border: 1px solid #E4E7EC;
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
+    background: #fff;
+}
+.section-head{
+    font-size: 18px;
+    font-weight: 500;
+    color: #101828;
+    padding: 20px 24px;
+    border-bottom: 1px solid #E4E7EC;
+}
+.table-filters{
+    padding: 20px 24px;
+    border-bottom: 1px solid #E4E7EC;
+}
+.data-table-area .table th,.data-table-area .table td {
+    padding: 16px 24px;
+}
+.data-table-area .table th{
+    background: #F9FAFB;
+    font-size: 12px;
+    font-weight: 500;
+    color: #667085;
+    line-height: 20px;
+    white-space: nowrap;
+}
+.data-table-area .table td{
+    font-size: 14px;
+    font-weight: 500;
+    color: #101828;
+    line-height: 20px;
+}
+.data-table-area .table td .ac-name{
+    color: #667085;
+}
