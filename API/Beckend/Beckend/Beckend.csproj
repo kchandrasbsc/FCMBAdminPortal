@@ -26,4 +26,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Beckend.BAL\Beckend.BAL.csproj" />
+    <ProjectReference Include="..\Beckend.DAL\Beckend.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Beckend.Models;
+using Beckend.DAL.Entities;
+using Beckend.BAL.Interface;
 
 namespace Beckend.Controllers
 {
@@ -13,40 +14,39 @@ namespace Beckend.Controllers
     [ApiController]
     public class StpRequestsController : ControllerBase
     {
-        private readonly NapsStp2019Context _context;
+        public readonly IRequestBal _requestBal;
 
-        public StpRequestsController(NapsStp2019Context context)
+        public StpRequestsController(IRequestBal requestBal)
         {
-            _context = context;
+            _requestBal = requestBal;
         }
 
         // GET: api/StpRequests
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<StpRequest>>> GetStpRequests()
+        public async Task<IActionResult> GetStpRequests()
         {
-          if (_context.StpRequests == null)
+            var requests = await _requestBal.GetAllRequests();
+            if (requests == null)
           {
               return NotFound();
           }
-            return await _context.StpRequests.ToListAsync();
+            return Ok(requests);
         }
 
         // GET: api/StpRequests/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<StpRequest>> GetStpRequest(long id)
+        public async Task<IActionResult> GetStpRequestById(int id)
         {
-          if (_context.StpRequests == null)
-          {
-              return NotFound();
-          }
-            var stpRequest = await _context.StpRequests.FindAsync(id);
+            var requesttDetails = await _requestBal.GetRequestById(id);
 
-            if (stpRequest == null)
+            if (requesttDetails != null)
             {
-                return NotFound();
+                return Ok(requesttDetails);
             }
-
-            return stpRequest;
+            else
+            {
+                return BadRequest();
+            }
         }
 
         //// PUT: api/StpRequests/5
@@ -115,9 +115,5 @@ namespace Beckend.Controllers
         //    return NoContent();
         //}
 
-        private bool StpRequestExists(long id)
-        {
-            return (_context.StpRequests?.Any(e => e.Id == id)).GetValueOrDefault();
-        }
     }
 }

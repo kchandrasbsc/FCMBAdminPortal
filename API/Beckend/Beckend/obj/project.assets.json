@@ -4004,6 +4004,43 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Beckend.BAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Beckend.Common": "1.0.0",
+          "Beckend.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Beckend.BAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beckend.BAL.dll": {}
+        }
+      },
+      "Beckend.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Beckend.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beckend.Common.dll": {}
+        }
+      },
+      "Beckend.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.8"
+        },
+        "compile": {
+          "bin/placeholder/Beckend.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Beckend.DAL.dll": {}
+        }
       }
     }
   },
@@ -11781,10 +11818,27 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Beckend.BAL/1.0.0": {
+      "type": "project",
+      "path": "../Beckend.BAL/Beckend.BAL.csproj",
+      "msbuildProject": "../Beckend.BAL/Beckend.BAL.csproj"
+    },
+    "Beckend.Common/1.0.0": {
+      "type": "project",
+      "path": "../Beckend.Common/Beckend.Common.csproj",
+      "msbuildProject": "../Beckend.Common/Beckend.Common.csproj"
+    },
+    "Beckend.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Beckend.DAL/Beckend.DAL.csproj",
+      "msbuildProject": "../Beckend.DAL/Beckend.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Beckend.BAL >= 1.0.0",
+      "Beckend.DAL >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.8",
       "Microsoft.EntityFrameworkCore >= 7.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.8",
@@ -11821,7 +11875,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\FCMB_2023_V1\\API\\Beckend\\Beckend.BAL\\Beckend.BAL.csproj": {
+              "projectPath": "E:\\FCMB_2023_V1\\API\\Beckend\\Beckend.BAL\\Beckend.BAL.csproj"
+            },
+            "E:\\FCMB_2023_V1\\API\\Beckend\\Beckend.DAL\\Beckend.DAL.csproj": {
+              "projectPath": "E:\\FCMB_2023_V1\\API\\Beckend\\Beckend.DAL\\Beckend.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

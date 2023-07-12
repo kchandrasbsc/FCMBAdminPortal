@@ -1,0 +1,17 @@
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\bin\Debug\net7.0\Beckend.BAL.deps.json
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\bin\Debug\net7.0\Beckend.BAL.dll
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\bin\Debug\net7.0\Beckend.BAL.pdb
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\bin\Debug\net7.0\Beckend.Common.dll
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\bin\Debug\net7.0\Beckend.DAL.dll
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\bin\Debug\net7.0\Beckend.Common.pdb
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\bin\Debug\net7.0\Beckend.DAL.pdb
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.csproj.AssemblyReference.cache
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.AssemblyInfoInputs.cache
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.AssemblyInfo.cs
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.csproj.CoreCompileInputs.cache
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.csproj.CopyComplete
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.dll
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\refint\Beckend.BAL.dll
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\Beckend.BAL.pdb
+E:\FCMB_2023_V1\API\Beckend\Beckend.BAL\obj\Debug\net7.0\ref\Beckend.BAL.dll

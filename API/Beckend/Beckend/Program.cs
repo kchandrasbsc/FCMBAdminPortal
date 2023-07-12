@@ -1,7 +1,16 @@
-using Beckend.Models;
+using Beckend.BAL.BusinessManager;
+using Beckend.BAL.Interface;
+using Beckend.DAL;
+using Beckend.DAL.Entities;
+using Beckend.DAL.IRepositories;
+using Beckend.DAL.Repositories;
+using Beckend.DAL.UOW;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IRequestRepository, RequestRepository>();
+builder.Services.AddScoped<IRequestBal, RequestBal>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Add services to the container.
 
