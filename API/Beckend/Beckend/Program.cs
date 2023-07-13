@@ -6,6 +6,8 @@ using Beckend.DAL.IRepositories;
 using Beckend.DAL.Repositories;
 using Beckend.DAL.UOW;
 using Microsoft.EntityFrameworkCore;
+using Userupdateservice;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IRequestRepository, RequestRepository>();
@@ -25,6 +27,14 @@ builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
 builder.Services.AddDbContext<NapsStp2019Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("dbconnection")));
 
 var app = builder.Build();
+var configsetting = new ConfigurationBuilder().
+    AddJsonFile("appsettings.json").Build();
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .MinimumLevel.Override("microsoft", Serilog.Events.LogEventLevel.Information)
+    .Enrich.FromLogContext()
+    .WriteTo.File(builder.Configuration["Logging:Logpath"].ToString())
+    .CreateLogger();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
