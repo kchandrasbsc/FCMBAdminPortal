@@ -18,6 +18,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(p => p.AddPolicy("corspolicy", build =>
+{
+    build.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
+}));
 builder.Services.AddDbContext<NapsStp2019Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("dbconnection")));
 
 var app = builder.Build();
@@ -28,11 +32,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("corspolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();
