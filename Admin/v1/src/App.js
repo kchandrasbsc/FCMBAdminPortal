@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Transection from './Transection';
 import RightPanel from './RightPanel';
+import Reporting from './Reporting';
 import LeftPanel from './LeftPanel';
 const jsonData = [
   // { id: 1, name: 'John', age: 25 },
@@ -55,6 +56,7 @@ class App extends Component{
             <Route path="cards" element={<RightPanel />} />
 
             <Route path="transection" element={<Transection data={jsonData} />} />
+            <Route path="reporting" element={<Reporting data={jsonData} />} />
 
             </Route>
         </Routes>

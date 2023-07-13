@@ -15,6 +15,7 @@ h1{
     font-size: 30px;
     line-height: 38px;
     color: #344054;
+    margin-bottom: 16px;
 }
 .BG{
     height: 100%;
@@ -147,7 +148,7 @@ a.nav-link.active svg path{
 .btn {
     border-color: #D0D5DD;
     font-size: 14px;
-    color: #344054;
+    /* color: #344054; */
     padding: 9px 16px;
     font-weight: 500;
 }
@@ -180,7 +181,7 @@ button.btn.btn-light svg{
 }
 .card-slot-col-1 {
     font-size: 12px;
-    color: #344054;
+    color: #039855;
     font-weight: 500;
     border-bottom: 1px dashed #98A2B3;
     line-height: 32px;
@@ -189,16 +190,21 @@ button.btn.btn-light svg{
 .card-numbers {
     font-size: 24px;
     font-weight: 600;
-    color: #344054;
+    color: #039855;
 }
 a.view-request-1 {
     font-size: 12px;
     font-weight: 400;
-    color: #344054;
+    color: #039855;
     margin: 15px 13px;
     display: inline-block;
 }
-
+a.view-request-1 svg{
+    margin-left: 10px;
+}
+a.view-request-1 svg path{
+    stroke:#039855;
+}
 .card-slot-col-2 {
     font-size: 12px;
     color: #5C068C;
@@ -207,6 +213,11 @@ a.view-request-1 {
     line-height: 32px;
     margin-bottom: 16px;
 }
+.card-numbers-2{
+    font-size: 24px;
+    font-weight: 600;
+    color: #5C068C;
+}
 a.view-request-2 {
     font-size: 12px;
     font-weight: 400;
@@ -214,9 +225,15 @@ a.view-request-2 {
     margin: 15px 13px;
     display: inline-block;
 }
+a.view-request-2 svg{
+    margin-left: 10px;
+}
+a.view-request-2 svg path{
+    stroke:#5C068C;
+}
 .card-slot-col-3 {
     font-size: 12px;
-    color: #B54708;
+    color: #F79009;
     font-weight: 500;
     border-bottom: 1px dashed #98A2B3;
     line-height: 32px;
@@ -225,13 +242,24 @@ a.view-request-2 {
 a.view-request-3 {
     font-size: 12px;
     font-weight: 400;
-    color: #B54708;
+    color: #F79009;
     margin: 15px 13px;
     display: inline-block;
 }
+.card-numbers-3{
+    font-size: 24px;
+    font-weight: 600;
+    color: #F79009;
+}
+a.view-request-3 svg{
+    margin-left: 10px;
+}
+a.view-request-3 svg path{
+    stroke:#F79009;
+}
 .card-slot-col-4 {
     font-size: 12px;
-    color: #B42318;
+    color: #B54708;
     font-weight: 500;
     border-bottom: 1px dashed #98A2B3;
     line-height: 32px;
@@ -240,36 +268,27 @@ a.view-request-3 {
 a.view-request-4 {
     font-size: 12px;
     font-weight: 400;
-    color: #B42318;
+    color: #B54708;
     margin: 15px 13px;
     display: inline-block;
 }
-.asc::after {
-    content: ' ' ;
-    display: inline-block;
-    margin-left: 1em;
-    background: url('./images/arrow-down-short.svg') no-repeat center center;
-    width: 14px;
-    height: 16px;
-    vertical-align: middle;
-    cursor: pointer;
+.card-numbers-4{
+    font-size: 24px;
+    font-weight: 600;
+    color: #B54708;
 }
-.desc::after {
-    content: ' ';
-    display: inline-block;
-    margin-left: 1em;
-    background: url('./images/arrow-up-short.svg') no-repeat center center;
-    width: 14px;
-    height: 16px;
-    vertical-align: middle;
-    cursor: pointer;
+a.view-request-4 svg{
+    margin-left: 10px;
 }
-
+a.view-request-4 svg path{
+    stroke:#B54708;
+}
 /* Data Table Structure */
 .table-structure{
     border: 1px solid #E4E7EC;
     box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
     background: #fff;
+    border-radius: 8px;
 }
 .section-head{
     font-size: 18px;
@@ -282,6 +301,10 @@ a.view-request-4 {
     padding: 20px 24px;
     border-bottom: 1px solid #E4E7EC;
 }
+.table-filters .bold{
+    font-size: 18px;
+    font-weight: 500px;
+}
 .data-table-area .table th,.data-table-area .table td {
     padding: 16px 24px;
 }
@@ -291,7 +314,6 @@ a.view-request-4 {
     font-weight: 500;
     color: #667085;
     line-height: 20px;
-    white-space: nowrap;
 }
 .data-table-area .table td{
     font-size: 14px;
@@ -301,4 +323,97 @@ a.view-request-4 {
 }
 .data-table-area .table td .ac-name{
     color: #667085;
+}
+.table-detailed-bar{
+    padding: 20px 24px;
+    border-bottom: 1px solid #E4E7EC;
+}
+.table-detailed-bar .bold{
+    font-size: 18px;
+    font-weight: 500px;
+}
+.table-detailed-bar .sub-text{
+    color: #667085;
+}
+.select-dates{
+    position: absolute;
+    background: #fff;
+    padding: 20px;
+    min-width: 400px;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+}
+/* Table Footer Pagination */
+
+.table-footer {
+    padding: 25px 26px;
+} 
+.table-footer .page-nbrs{
+    display: flex;
+    justify-content: center;
+}
+.table-footer .btn-prev{
+    border: 1px solid #D0D5DD;
+    padding: 8px 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #344054;
+}
+.table-footer .btn-prev:hover{
+    border: 1px solid #b2b6be;
+}
+.table-footer .btn-prev svg{
+    margin-right: 10px;
+}
+.table-footer .btn-nxt{
+    border: 1px solid #D0D5DD;
+    padding: 8px 14px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #344054;
+}
+.table-footer .btn-nxt:hover{
+    border: 1px solid #b2b6be;
+}
+.table-footer .btn-nxt svg{
+    margin-left: 10px;
+}
+.page-nbrs .btn{
+    border: none;
+    padding: 12px;
+    width: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+.page-nbrs .btn:hover{
+    border: none;
+    background: #F9EEFF;
+    color: #7D1AB5;
+}
+.page-nbrs .active{
+    background: #F9EEFF;
+    color: #7D1AB5;
+}
+.gen-report{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+.gen-report svg.search-oval{
+    margin-bottom: 16px;
+}
+.gen-report .gen-report-hding{
+    font-size: 16px;
+    font-weight: 500;
+    color: #101828;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+.gen-report p{
+   color: #667085;
 }

@@ -41,9 +41,8 @@ import React, { Component,  useState  } from "react";
             })
           : filteredData;
         return(
-            <div className="right-panel">
-            <div className="page-content">
-            <h1>Transactions</h1>
+            <div>
+              <h1>Transactions</h1>
             <div className="table-structure">
                 <div className="section-head">
                     Recent Transactions
@@ -96,8 +95,7 @@ import React, { Component,  useState  } from "react";
                         </table>
                 </div>
             </div>
-        </div>
-        </div>
+            </div>        
         );
     };
 // }

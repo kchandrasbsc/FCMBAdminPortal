@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import RightPanel from './RightPanel'; 
 
 class LeftPanel extends Component {
     render(){
@@ -12,12 +11,6 @@ class LeftPanel extends Component {
     <div className="navigation">
         <ul className="nav flex-column">
             <li className="nav-item">
-                {/* <a className="nav-link active" aria-current="page" href="/Dashboard/cards">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18 20V10M12 20V4M6 20V14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    Dashboard
-                </a> */}
                   <Link className="nav-link active" aria-current="page" to="/Dashboard/cards"> 
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 20V10M12 20V4M6 20V14" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -25,17 +18,18 @@ class LeftPanel extends Component {
                     Dashboard</Link>
             </li>
             <li className="nav-item">
-                {/* <a className="nav-link" aria-current="page" href="/Dashboard/transection">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 6H21M8 12H21M8 18H21M3 6H3.01M3 12H3.01M3 18H3.01" stroke="#FCFCFD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    Transactions
-                </a> */}
                   <Link className="nav-link" aria-current="page" to="/Dashboard/transection">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 6H21M8 12H21M8 18H21M3 6H3.01M3 12H3.01M3 18H3.01" stroke="#FCFCFD" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     Transactions</Link>
+            </li>
+            <li className="nav-item">
+                  <Link className="nav-link" aria-current="page" to="/Dashboard/reporting">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 11L12 14L22 4M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="#D0D5DD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                    Reporting</Link>
             </li>
             <li className="nav-item">
                 <a className="nav-link" aria-current="page" href="#">

@@ -7,7 +7,11 @@ render(){
   return (
     <>
       <LeftPanel />
-      <Outlet />
+      <div className="right-panel">
+            <div className="page-content">
+              <Outlet />
+            </div>
+      </div>
     </>
   );
 }
