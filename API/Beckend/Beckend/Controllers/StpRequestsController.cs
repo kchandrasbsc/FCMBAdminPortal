@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Beckend.DAL.Entities;
 using Beckend.BAL.Interface;
-
+using Userupdateservice;
 namespace Beckend.Controllers
 {
     [Route("api/[controller]")]
@@ -15,36 +15,55 @@ namespace Beckend.Controllers
     public class StpRequestsController : ControllerBase
     {
         public readonly IRequestBal _requestBal;
-
-        public StpRequestsController(IRequestBal requestBal)
+        private readonly ILogger<Worker> _logger;
+        public StpRequestsController(IRequestBal requestBal, ILogger<Worker> logger)
         {
             _requestBal = requestBal;
+            this._logger = logger;
         }
 
         // GET: api/StpRequests
         [HttpGet]
         public async Task<IActionResult> GetStpRequests()
         {
-            var requests = await _requestBal.GetAllRequests();
-            if (requests == null)
-          {
-              return NotFound();
-          }
-            return Ok(requests);
+            _logger.LogInformation("Execution started");
+            try
+            {
+                var requests = await _requestBal.GetAllRequests();
+                if (requests == null)
+                {
+                    return NotFound();
+                }
+                return Ok(requests);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                return BadRequest();
+            }
         }
 
         // GET: api/StpRequests/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetStpRequestById(int id)
         {
-            var requesttDetails = await _requestBal.GetRequestById(id);
+            _logger.LogInformation("Execution started");
+            try
+            {
+                var requesttDetails = await _requestBal.GetRequestById(id);
 
-            if (requesttDetails != null)
-            {
-                return Ok(requesttDetails);
+                if (requesttDetails != null)
+                {
+                    return Ok(requesttDetails);
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
-            else
+            catch (Exception ex)
             {
+                _logger.LogError(ex, ex.Message);
                 return BadRequest();
             }
         }
