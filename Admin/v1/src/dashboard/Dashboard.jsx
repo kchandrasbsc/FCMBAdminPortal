@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import RightPanel from './RightPanel'; 
-import LeftPanel from './LeftPanel';
+import RightPanel from '../shared/RightPanel'; 
+import LeftPanel from '../shared/LeftPanel';
 
 class Dashboard extends Component {
     render(){
