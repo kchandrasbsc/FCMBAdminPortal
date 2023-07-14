@@ -1,8 +1,24 @@
-import React, { Component,  useState  } from "react";
+import React, { Component, useState,useEffect  } from "react";
 
 // class Transection extends Component{
 //     render(){
-    const Transection = ({ data }) => {
+    const Transection = () => {
+      const [data, setData] = useState([]);
+      try {
+        useEffect(() => {        
+          const response = 'https://localhost:7139/api/StpRequests';    
+                const requestData = fetch(response)    
+                    .then(res => res.json()).then(data => setData(data))
+                  },[])
+            } catch (error) {
+                if (error instanceof SyntaxError) {
+                    // Unexpected token < in JSON
+                    console.log('There was a SyntaxError', error);
+                } else {
+                    console.log('There was an error', error);
+                }
+            }
+    
         const [searchTerm, setSearchTerm] = useState('');
         const [sortColumn, setSortColumn] = useState(null);
         const [sortDirection, setSortDirection] = useState('asc');
@@ -20,9 +36,9 @@ import React, { Component,  useState  } from "react";
           }
         };
       
-        const filteredData = data.filter((item) =>
+        const filteredData = data?.filter((item) =>
           Object.values(item).some((value) =>
-            value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+            value?.toString().toLowerCase().includes(searchTerm.toLowerCase())
           )
         );
       
@@ -74,14 +90,14 @@ import React, { Component,  useState  } from "react";
                 <div className="data-table-area table-responsive">
                       <table className="table table-hover table-bordered mb-0">
                             <thead>
-                            <tr>
+                           {data.length>0 && <tr>
                                 {Object.keys(data[0]).map((column) => (
                                 <th 
                                          className={ sortDirection === 'asc' ? "asc" : "desc" } key={column} onClick={() => handleSort(column)} >
                                     {column}                    
                                 </th>
                                 ))}
-                            </tr>
+                            </tr>}
                             </thead>
                             <tbody>
                             {sortedData.map((item, index) => (

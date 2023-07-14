@@ -2,34 +2,6 @@ import React, { Component ,useState,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 class LeftPanel extends Component {
-   
-
-    componentDidMount() {
-
-
-        try {
-            const response = 'https://localhost:7139/api/StpRequests';
-
-            const requestData = fetch(response)
-
-                .then(res => res.json()).then(data => {
-                    alert(data)
-
-                    console.log(data)
-                })
-        } catch (error) {
-            if (error instanceof SyntaxError) {
-                // Unexpected token < in JSON
-                console.log('There was a SyntaxError', error);
-            } else {
-                console.log('There was an error', error);
-            }
-        }
-    }
-
-
-
-
     render(){
   return (
     <div className="left-nav-panel">

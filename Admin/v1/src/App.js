@@ -55,7 +55,7 @@ class App extends Component{
 
             <Route path="cards" element={<RightPanel />} />
 
-            <Route path="transection" element={<Transection data={jsonData} />} />
+            <Route path="transection" element={<Transection/>} />
             <Route path="reporting" element={<Reporting data={jsonData} />} />
 
             </Route>
