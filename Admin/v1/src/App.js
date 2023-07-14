@@ -14,6 +14,7 @@ import Transection from './Transection';
 import RightPanel from './RightPanel';
 import Reporting from './Reporting';
 import LeftPanel from './LeftPanel';
+import UserManagement from './UserManagement';
 const jsonData = [
   // { id: 1, name: 'John', age: 25 },
   // { id: 2, name: 'Jane', age: 30 },
@@ -57,6 +58,7 @@ class App extends Component{
 
             <Route path="transection" element={<Transection data={jsonData} />} />
             <Route path="reporting" element={<Reporting data={jsonData} />} />
+            <Route path="user-management" element={<UserManagement data={jsonData} />} />
 
             </Route>
         </Routes>

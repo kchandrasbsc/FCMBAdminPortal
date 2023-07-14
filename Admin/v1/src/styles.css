@@ -22,6 +22,7 @@ h1{
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    background: #F9FAFB;
 }
 /*Login Page CSS*/
 .loginBG{
@@ -416,4 +417,39 @@ a.view-request-4 svg path{
 }
 .gen-report p{
    color: #667085;
+}
+
+
+/* Badges for active inactive */
+.bg-active{
+    background: #ECFDF3;
+    color: #027A48;
+    padding: 5px 11px;
+    border-radius: 16px;
+}
+.bg-active::before{
+    content: ' ';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #12B76A;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.bg-inactive{
+    background: #FFFAEB;
+    color: #B54708;
+    padding: 5px 11px;
+    border-radius: 16px;
+}
+.bg-inactive::before{
+    content: ' ';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #F79009;
+    border-radius: 100%;
+    vertical-align: middle;
+    margin-right: 6px;
 }

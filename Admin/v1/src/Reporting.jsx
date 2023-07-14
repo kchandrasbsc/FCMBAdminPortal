@@ -11,16 +11,22 @@ class Reporting extends Component {
             </div>
             <div className="table-filters">
                 <div className="row">
-                    <div className="col-4">
-                        <select className="form-select" aria-label="Default select example">
-                            <option selected>Report type</option>
-                            <option value="1">Pending requests</option>
-                            <option value="2">Completed requests</option>
-                            </select>
+                    <div className="col">
+                        <div className="row">
+                            <div className="col-6">
+                                <select className="form-select" aria-label="Default select example">
+                                    <option selected>Report type</option>
+                                    <option value="1">Pending requests</option>
+                                    <option value="2">Completed requests</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-auto">
+                        <div className="row">
+                        <div className="col-auto">
                         <div>
-                            <button type="button" className="btn btn-light" onclick="myFunction()">
+                            <button type="button" className="btn btn-light m-0" onclick="myFunction()">
                                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3333 1.66669V5.00002M5.66667 1.66669V5.00002M1.5 8.33335H16.5M3.16667 3.33335H14.8333C15.7538 3.33335 16.5 4.07955 16.5 5.00002V16.6667C16.5 17.5872 15.7538 18.3334 14.8333 18.3334H3.16667C2.24619 18.3334 1.5 17.5872 1.5 16.6667V5.00002C1.5 4.07955 2.24619 3.33335 3.16667 3.33335Z" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>                                    
@@ -45,8 +51,10 @@ class Reporting extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col-auto">
                         <button type="button"  style={{float: "right"}} className="btn btn-primary">Generate Report</button>
+                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,17 +75,23 @@ class Reporting extends Component {
                 Generate Report
             </div>
             <div className="table-filters">
-                <div className="row">
-                    <div className="col-4">
-                        <select className="form-select" aria-label="Default select example">
-                            <option selected>Report type</option>
-                            <option value="1">Pending requests</option>
-                            <option value="2">Completed requests</option>
-                            </select>
+            <div className="row">
+                    <div className="col">
+                        <div className="row">
+                            <div className="col-6">
+                                <select className="form-select" aria-label="Default select example">
+                                    <option selected>Report type</option>
+                                    <option value="1">Pending requests</option>
+                                    <option value="2">Completed requests</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-auto">
+                        <div className="row">
+                        <div className="col-auto">
                         <div>
-                            <button type="button" className="btn btn-light" onclick="myFunction()">
+                            <button type="button" className="btn btn-light m-0" onclick="myFunction()">
                                 <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.3333 1.66669V5.00002M5.66667 1.66669V5.00002M1.5 8.33335H16.5M3.16667 3.33335H14.8333C15.7538 3.33335 16.5 4.07955 16.5 5.00002V16.6667C16.5 17.5872 15.7538 18.3334 14.8333 18.3334H3.16667C2.24619 18.3334 1.5 17.5872 1.5 16.6667V5.00002C1.5 4.07955 2.24619 3.33335 3.16667 3.33335Z" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>                                    
@@ -90,10 +104,10 @@ class Reporting extends Component {
                                 </div>
                                 <div className="row mt-4">
                                     <div className="col-6">
-                                        <input type="date" className="form-control" placeholder="Select From Date"/>
+                                        <input type="date" className="form-control" placeholder="Select From Date" />
                                     </div>
                                     <div className="col-6">
-                                        <input type="date" className="form-control" placeholder="Select From Date"/>
+                                        <input type="date" className="form-control" placeholder="Select From Date" />
                                     </div>
                                     <div className="col-12 mt-3">
                                         <button type="submit" className="btn btn-primary btn-lg">Search</button>
@@ -102,8 +116,10 @@ class Reporting extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col-auto">
                         <button type="button"  style={{float: "right"}} className="btn btn-primary">Generate Report</button>
+                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
