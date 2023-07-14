@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import HeaderBar from './HeaderBar';
 import DashboardCard from './DashboardCard';
-import Transection from '../transactions/Transection';
+// import Transection from '../transactions/Transection';
 
 class RightPanel extends Component {
      render(){ 

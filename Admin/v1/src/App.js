@@ -9,10 +9,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Transection from './transactions/Transection';
+import Transection from './dashboard/transactions/Transection';
+import Reporting from './dashboard/reportings/Reporting';
+import UserManagement from './dashboard/user-management/UserManagement';
 import RightPanel from './shared/RightPanel';
-import Reporting from './reportings/Reporting';
-import LeftPanel from './shared/LeftPanel';
 const jsonData = [
   // { id: 1, name: 'John', age: 25 },
   // { id: 2, name: 'Jane', age: 30 },
