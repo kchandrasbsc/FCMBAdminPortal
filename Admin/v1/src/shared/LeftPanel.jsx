@@ -6,7 +6,7 @@ class LeftPanel extends Component {
   return (
     <div className="left-nav-panel">
     <div className="logo-bar">
-        <img src={require("./images/Logo2.png")} alt="FCMB NAPS INWARD"></img>
+        <img src={require("../images/Logo2.png")} alt="FCMB NAPS INWARD"></img>
     </div>
     <div className="navigation">
         <ul className="nav flex-column">
@@ -51,7 +51,7 @@ class LeftPanel extends Component {
             </a>
         </nav>
         <div className="avatar-bar d-flex">
-            <div><img src={require("./images/Avatar.png")}></img></div>
+            <div><img src={require("../images/Avatar.png")}></img></div>
             <div>
                 <div>Olivia Rhye</div>
                 <div>SOL ID: 22334</div>

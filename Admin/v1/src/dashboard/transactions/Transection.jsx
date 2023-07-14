@@ -1,4 +1,4 @@
-import React, { Component, useState,useEffect  } from "react";
+import React, { useState,useEffect  } from "react";
 
 // class Transection extends Component{
 //     render(){
@@ -7,9 +7,10 @@ import React, { Component, useState,useEffect  } from "react";
       try {
         useEffect(() => {        
           const response = 'https://localhost:7139/api/StpRequests';    
-                const requestData = fetch(response)    
+                fetch(response)    
                     .then(res => res.json()).then(data => setData(data))
                   },[])
+             
             } catch (error) {
                 if (error instanceof SyntaxError) {
                     // Unexpected token < in JSON

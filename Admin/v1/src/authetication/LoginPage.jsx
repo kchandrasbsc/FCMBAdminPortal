@@ -44,7 +44,7 @@ const LoginPage = () => {
     <div  className="loginBG">
     <div className="d-flex loginCenter">
         <div className="container">
-            <img src={require("./images/logo1.png")} alt="FCMB" className="logoBorder"/>
+            <img src={require("../assets/images/logo1.png")} alt="FCMB" className="logoBorder"/>
             <div className="loginDialogue">
                 <h1 className="signIn">Sign in</h1>
                 <form className="mb-0" onSubmit={handleSubmit}>

@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import Head from './Head'
-import DataGrid from './DataGrid';
-import Dashboard from './Dashboard';
-import LoginPage from './LoginPage'; 
-import SidebarLayout from './SidebarLayout';
+import Head from './shared/Head'
+import Dashboard from './dashboard/Dashboard';
+import LoginPage from './authetication/LoginPage'
+import SidebarLayout from './shared/SidebarLayout';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link
 } from "react-router-dom";
-import Transection from './Transection';
-import RightPanel from './RightPanel';
-import Reporting from './Reporting';
-import LeftPanel from './LeftPanel';
-import UserManagement from './UserManagement';
+import Transection from './transactions/Transection';
+import RightPanel from './shared/RightPanel';
+import Reporting from './reportings/Reporting';
+import LeftPanel from './shared/LeftPanel';
 const jsonData = [
   // { id: 1, name: 'John', age: 25 },
   // { id: 2, name: 'Jane', age: 30 },
