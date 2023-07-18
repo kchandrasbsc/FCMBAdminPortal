@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace Beckend.Entities;
-
+ 
 public partial class NapsStp2019Context : DbContext
 {
     public NapsStp2019Context()

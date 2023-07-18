@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace Beckend.Entities;
-
+ 
 public partial class StpSysMonHist
 {
     public long Id { get; set; }

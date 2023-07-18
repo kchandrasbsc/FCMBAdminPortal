@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace Beckend.Entities;
-
+ 
 public partial class StpRequest
 {
     public long Id { get; set; }

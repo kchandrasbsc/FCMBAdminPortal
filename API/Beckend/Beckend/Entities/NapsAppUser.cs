@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace Beckend.Entities;
-
+ 
 public partial class NapsAppUser
 {
     public string Username { get; set; } = null!;
