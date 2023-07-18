@@ -1,10 +1,14 @@
 import React, { Component } from 'react'; 
+// import { useTable, usePagination } from 'react-table'
+
 
 class UserManagement extends Component {
     render(){
   return (
     <div>
         <h1>User Management</h1>
+
+
         <div className="table-structure">
             <div className="section-head">
                 User List

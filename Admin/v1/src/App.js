@@ -13,6 +13,7 @@ import Transection from './dashboard/transactions/Transection';
 import Reporting from './dashboard/reportings/Reporting';
 import UserManagement from './dashboard/user-management/UserManagement';
 import RightPanel from './shared/RightPanel';
+import PaginationTableComponent from './basic.table';
 const jsonData = [
   // { id: 1, name: 'John', age: 25 },
   // { id: 2, name: 'Jane', age: 30 },
@@ -55,6 +56,7 @@ class App extends Component{
             <Route path="cards" element={<RightPanel />} />
 
             <Route path="transection" element={<Transection/>} />
+            <Route path="table" element={<PaginationTableComponent/>} />
             <Route path="reporting" element={<Reporting data={jsonData} />} />
             <Route path="user-management" element={<UserManagement data={jsonData} />} />
 
