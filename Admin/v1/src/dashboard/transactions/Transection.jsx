@@ -1,4 +1,4 @@
-import React, { Component, useState,useEffect  } from "react";
+import React, { useState,useEffect  } from "react";
 
 // class Transection extends Component{
 //     render(){
@@ -7,9 +7,10 @@ import React, { Component, useState,useEffect  } from "react";
       try {
         useEffect(() => {        
           const response = 'https://localhost:7139/api/StpRequests';    
-                const requestData = fetch(response)    
+                fetch(response)    
                     .then(res => res.json()).then(data => setData(data))
                   },[])
+             
             } catch (error) {
                 if (error instanceof SyntaxError) {
                     // Unexpected token < in JSON
@@ -110,6 +111,32 @@ import React, { Component, useState,useEffect  } from "react";
                             </tbody>
                         </table>
                 </div>
+                <div className="table-footer">
+                <div className="row gx-2">
+                    <div className="col-auto">
+                        <button type="button" className="btn btn-prev">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8333 7.00008H1.16666M1.16666 7.00008L6.99999 12.8334M1.16666 7.00008L6.99999 1.16675" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                            Previous</button>
+                    </div>
+                    <div className="col page-nbrs">
+                        <div className="" role="group" aria-label="First group">
+                            <button type="button" className="btn btn-outline-secondary active">1</button>
+                            <button type="button" className="btn btn-outline-secondary">2</button>
+                            <button type="button" className="btn btn-outline-secondary">3</button>
+                            <button type="button" className="btn btn-outline-secondary">4</button>
+                            </div>
+                    </div>
+                    <div className="col-auto">
+                        <button type="button" className="btn btn-nxt">Next 
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.16669 7.00008H12.8334M12.8334 7.00008L7.00002 1.16675M12.8334 7.00008L7.00002 12.8334" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                        
+                        </button>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>        
         );
