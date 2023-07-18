@@ -76,7 +76,7 @@ h1.signIn{
     background: #1D002E;
     height: 100%;
     width: 20%;
-    position: relative;
+    position: fixed;
 }
 .logo-bar{
     padding:32px 24px;
@@ -136,6 +136,7 @@ a.nav-link.active svg path{
 /*Right Panel CSS*/
 .right-panel{
     width: 80%;
+    margin-left: 20%;
 }
 .page-content{
     padding: 32px 24px;

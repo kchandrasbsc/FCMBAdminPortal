@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class LeftPanel extends Component {
     render(){
   return (
-    <div className="left-nav-panel">
+<div className="left-nav-panel">
     <div className="logo-bar">
         <img src={require("../assets/images/Logo2.png")} alt="FCMB NAPS INWARD"></img>
     </div>
