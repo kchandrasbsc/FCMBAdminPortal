@@ -454,3 +454,11 @@ a.view-request-4 svg path{
     vertical-align: middle;
     margin-right: 6px;
 }
+
+.search-icon{
+    background: url("../src/assets/images/search.png") no-repeat center center;
+    padding-left: 39px;
+    background-position-y: 9px;
+    background-position-x: 6px;
+    min-height: 41px;
+}
